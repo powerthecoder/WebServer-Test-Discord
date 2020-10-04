@@ -6,7 +6,7 @@ import json
 
 app = Flask('__main__')
 
-@app.route('/')
+@app.route('/', method=['GET', 'POST'])
 def index():
     if (request.method == "POST"):
         if (request.form['discord_test'] == "discord_test"):            
